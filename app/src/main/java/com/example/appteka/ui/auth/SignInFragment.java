@@ -27,7 +27,7 @@ import com.example.appteka.model.AuthViewModel;
 import javax.inject.Inject;
 
 
-public class SignInFragment extends Fragment {
+public class     SignInFragment extends Fragment {
     private FragmentSigninBinding binding;
     @Inject ViewModelFactory factory;
     private AuthViewModel viewModel;

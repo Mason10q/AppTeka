@@ -2,26 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mainFragment"
+        android:id="@+id/storeFragment"
         android:title="Главная"
         android:icon="@drawable/ic_pharma"/>
 
 
-    <item
-        android:id="@+id/authorFragment"
-        android:title="Об авторе"
-        android:icon="@drawable/ic_cart"/>
+<!--    <item-->
+<!--        android:id="@+id/stFragment"-->
+<!--        android:title="Об авторе"-->
+<!--        android:icon="@drawable/ic_cart"/>-->
 
 
     <item
-        android:id="@+id/aboutAppFragment"
+        android:id="@+id/nav_info"
         android:title="О приложении"
         android:icon="@drawable/ic_info"/>
 
 
-    <item
-        android:id="@+id/profileFragment"
-        android:title="Профиль"
-        android:icon="@drawable/ic_profile"/>
+<!--    <item-->
+<!--        android:id="@+id/profileFragment"-->
+<!--        android:title="Профиль"-->
+<!--        android:icon="@drawable/ic_profile"/>-->
 
 </menu>

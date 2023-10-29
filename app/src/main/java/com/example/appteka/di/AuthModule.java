@@ -17,7 +17,5 @@ public interface AuthModule {
     @IntoMap
     @ViewModelKey(AuthViewModel.class)
     ViewModel bindMainActivityVM(AuthViewModel mainActivityVM);
-//    @Binds
-//    AuthRepository bindRepository(AuthRepository repository);
 
 }

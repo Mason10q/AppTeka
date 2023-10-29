@@ -3,51 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
-    app:startDestination="@id/infoFragment">
+    app:startDestination="@id/storeFragment">
+
+
+
 
     <fragment
-        android:id="@+id/infoFragment"
-        android:name="com.example.appteka.ui.info.InfoFragment"
-        android:label="fragment_about_app"
-        tools:layout="@layout/fragment_info" >
-        <action
-            android:id="@+id/action_infoFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
-        <action
-            android:id="@+id/action_infoFragment_to_aboutAuthorFragment"
-            app:destination="@id/aboutAuthorFragment" />
-        <action
-            android:id="@+id/action_infoFragment_to_aboutAppFragment"
-            app:destination="@id/aboutAppFragment" />
-    </fragment>
+        android:id="@+id/storeFragment"
+        android:name="com.example.appteka.ui.store.StoreFragment"
+        android:label="fragment_store"
+        tools:layout="@layout/fragment_store" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/authorFragment"-->
-<!--        android:name="com.example.computer_club.fragments.AuthorFragment"-->
-<!--        android:label="fragment_author"-->
-<!--        tools:layout="@layout/fragment_author" />-->
+    <include app:graph="@navigation/nav_info" />
 
-<!--    <fragment-->
-<!--        android:id="@+id/mainFragment"-->
-<!--        android:name="com.example.computer_club.main.MainFragment"-->
-<!--        android:label="fragment_main"-->
-<!--        tools:layout="@layout/fragment_main" />-->
 
-<!--    <fragment-->
-<!--        android:id="@+id/profileFragment"-->
-<!--        android:name="com.example.computer_club.profile.ProfileFragment"-->
-<!--        android:label="fragment_profile"-->
-<!--        tools:layout="@layout/fragment_profile" />-->
-    <fragment
-        android:id="@+id/aboutAppFragment"
-        android:name="com.example.appteka.ui.info.AboutAppFragment"
-        android:label="AboutAppFragment" />
-    <fragment
-        android:id="@+id/aboutAuthorFragment"
-        android:name="com.example.appteka.ui.info.AboutAuthorFragment"
-        android:label="AboutAuthorFragment" />
-    <fragment
-        android:id="@+id/instructionFragment"
-        android:name="com.example.appteka.ui.info.InstructionFragment"
-        android:label="InstructionFragment" />
 </navigation>

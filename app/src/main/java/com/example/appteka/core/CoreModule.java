@@ -10,4 +10,6 @@ public interface CoreModule {
     @Binds
     ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);
 
+
+
 }

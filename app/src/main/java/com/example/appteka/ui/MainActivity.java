@@ -1,6 +1,8 @@
 package com.example.appteka.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 
@@ -16,5 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        NavHostFragment hostFragment = (NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.host_fragment);
+
+        NavigationUI.setupWithNavController(binding.bottomNav, hostFragment.getNavController());
     }
 }

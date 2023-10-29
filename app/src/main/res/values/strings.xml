@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppTeka</string>
+    <string name="history_empty">Нет лекарств</string>
+    <string name="price">%1$d ₽</string>
+    <string name="weight">&#160;· %1$dг</string>
+    <string name="age">%1$d+</string>
 </resources>

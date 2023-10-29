@@ -26,20 +26,22 @@ public class AuthViewModel extends BaseViewModel {
 
     @SuppressLint("CheckResult")
     public void signIn(User user){
-        repository.signIn(user)
+        composite.add(repository.signIn(user)
                 .subscribe(
                         code -> { _enterData.postValue(code); },
                         throwable -> _error.postValue(throwable.getMessage())
-                );
+                )
+        );
     }
 
     @SuppressLint("CheckResult")
     public void signUp(User user){
-        repository.signUp(user)
+        composite.add(repository.signUp(user)
                 .subscribe(
                         code -> { },
                         throwable ->  _error.postValue(throwable.getMessage())
-                );
+                )
+        );
     }
 
 }

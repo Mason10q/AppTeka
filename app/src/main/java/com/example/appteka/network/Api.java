@@ -1,11 +1,17 @@
 package com.example.appteka.network;
 
+import com.example.appteka.entities.Drug;
 import com.example.appteka.entities.User;
 
+import java.util.List;
+
+import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
 import retrofit2.Response;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface Api {
 
@@ -15,4 +21,18 @@ public interface Api {
     @POST("/signup")
     Single<Response<Object>> signUp(@Body User user);
 
+    @GET("/getAllDrugs")
+    Single<List<Drug>> getAllDrugs();
+
+    @POST("/deleteDrug")
+    Single<Drug> deleteDrug(@Body Drug item);
+
+    @POST("/getUserByEmail")
+    Single<User> getUserByEmail(@Query("email") String email);
+
+    @POST("/checkIfInBasket")
+    Single<Boolean> checkIfInBasket(@Query("drug_name") String drugName, @Query("email") String email);
+
+    @POST("/addToBasket")
+    Completable addToBasket(@Query("drug_name") String drugName, @Query("email") String email);
 }

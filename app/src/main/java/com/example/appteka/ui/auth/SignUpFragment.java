@@ -76,7 +76,7 @@ public class SignUpFragment extends Fragment implements DatePickerDialog.OnDateS
             return;
         }
 
-        viewModel.signUp(new User(name, date, email, password));
+        viewModel.signUp(new User(name, date, email, password, false));
         toast("Успешно зарегестрирован!");
     }
 

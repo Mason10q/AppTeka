@@ -7,9 +7,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="17sp"
         android:layout_margin="20dp"
-        android:text="1. Скачайте и установите приложение AppTeka из [Google Play Store](ссылка на приложение). \n
+        android:text="1. Скачайте и установите приложение AppTeka из [Google Play Store]. \n
 2. Запустите приложение и зарегистрируйтесь, если вы новый пользователь. Если у вас уже есть аккаунт, войдите в свой профиль.\n
 3. Используйте поиск или просмотрите категории товаров, чтобы найти нужные вам лекарственные препараты и товары для здоровья.\n
 4. После выбора продукта добавьте его в корзину.\n
