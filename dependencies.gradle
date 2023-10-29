@@ -1,0 +1,60 @@
+ext.vers = [
+        minSdk                : 24,
+        targetSdk             : 33,
+        compileSdk            : 33,
+        jvmTarget             : 18,                          //должны быть равны
+        java                  : JavaVersion.VERSION_17,      //иначе отваливается даггер
+
+        dagger                : "2.16",
+        retrofit              : "2.9.0",
+        gson                  : "2.10.1",
+        okhttp_bom            : "4.11.0",
+        navigation            : "2.6.0",
+        viewModels            : "1.5.7",
+        rxjava                : "3.1.5",
+        rxjava_android        : "3.0.2",
+        circleImage           : "3.0.1",
+        picasso               : "2.8",
+        delegate_adapter      : "4.2"
+]
+
+
+ext.lib = [
+        dagger                    : "com.google.dagger:dagger:$vers.dagger",
+        dagger_compiler           : "com.google.dagger:dagger-compiler:$vers.dagger",
+
+        retrofit                  : "com.squareup.retrofit2:retrofit:$vers.retrofit",
+        retrofit_gson             : "com.squareup.retrofit2:converter-gson:$vers.retrofit",
+        retrofit_rx3              : "com.squareup.retrofit2:adapter-rxjava3:$vers.retrofit",
+
+        gson                      : "com.google.code.gson:gson:$vers.gson",
+
+        okhttp_bom                : "com.squareup.okhttp3:okhttp-bom:$vers.okhttp_bom",
+        okhttp                    : "com.squareup.okhttp3:okhttp",
+        okhttp_log_intercepter    : "com.squareup.okhttp3:logging-interceptor",
+
+        navigation_fragment       : "androidx.navigation:navigation-fragment-ktx:$vers.navigation",
+        navigation_ui             : "androidx.navigation:navigation-ui-ktx:$vers.navigation",
+
+        viewModels                : "androidx.fragment:fragment-ktx:$vers.viewModels",
+
+        rxjava                    : "io.reactivex.rxjava3:rxjava:$vers.rxjava",
+        rxjava_android            : "io.reactivex.rxjava3:rxandroid:$vers.rxjava_android",
+
+        circleImage               : "de.hdodenhof:circleimageview:$vers.circleImage",
+
+        picasso                   : "com.squareup.picasso:picasso:$vers.picasso",
+
+        delegate_adapter          : "io.github.d00mch:delegateadapter:$vers.delegate_adapter"
+]
+
+ext.libs = [
+        retrofit                  : [lib.retrofit, lib.retrofit_gson, lib.retrofit_rx3],
+        okhttp                    : [lib.okhttp, lib.okhttp_log_intercepter],
+        navigation                : [lib.navigation_fragment, lib.navigation_ui],
+        rxjava                    : [lib.rxjava, lib.rxjava_android],
+]
+
+ext.packs = [
+        network                   : [libs.retrofit, libs.okhttp, libs.rxjava, lib.gson]
+]
