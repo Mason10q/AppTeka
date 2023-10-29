@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:text="Аптечное онлайн-приложение AppTeka представляет собой удобное и надежное средство для осуществления покупок лекарственных препаратов и товаров для здоровья прямо из комфорта вашего мобильного устройства. Это полнофункциональное приложение, разработанное специально для пользователей на платформе Android, позволяющее вам удобно и безопасно заказывать необходимые медицинские продукты и получать их доставку в удобное для вас место."/>
+
+
+</LinearLayout>
