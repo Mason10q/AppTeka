@@ -51,6 +51,14 @@ public class SignUpFragment extends Fragment implements DatePickerDialog.OnDateS
                 ).show()
         );
 
+        viewModel.signUpCode.observe(getViewLifecycleOwner(), (code) -> {
+            if(code == 402){
+                toast("Такая почта уже зарегестрированна");
+            } else {
+                toast("Успешно зарегестрирован!");
+            }
+        });
+
         viewModel.error.observe(getViewLifecycleOwner(), this::toast);
 
         return binding.getRoot();
@@ -77,7 +85,6 @@ public class SignUpFragment extends Fragment implements DatePickerDialog.OnDateS
         }
 
         viewModel.signUp(new User(name, date, email, password, false));
-        toast("Успешно зарегестрирован!");
     }
 
     private void toast(String text) {

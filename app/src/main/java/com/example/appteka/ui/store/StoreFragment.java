@@ -66,16 +66,6 @@ public class StoreFragment extends Fragment{
             adapter.setBinder(delBinder);
         });
 
-        binding.addDrugBtn.setOnClickListener(v -> {
-            addDrugs();
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            viewModel.getAllDrugs();
-        });
-
         return binding.getRoot();
     }
 
@@ -121,7 +111,6 @@ public class StoreFragment extends Fragment{
             this.user = user;
 
             if(user.isAdmin){
-                binding.addDrugBtn.setVisibility(View.VISIBLE);
                 binding.deleteDrugBtn.setVisibility(View.VISIBLE);
             }
 

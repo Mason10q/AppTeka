@@ -15,6 +15,8 @@ public class AuthViewModel extends BaseViewModel {
     private MutableLiveData<Integer> _enterData = new MutableLiveData<>();
     public LiveData<Integer> enterData = _enterData;
 
+    private MutableLiveData<Integer> _signUpCode = new MutableLiveData<>();
+    public LiveData<Integer> signUpCode = _signUpCode;
     private AuthRepository repository;
 
     @Inject
@@ -36,7 +38,7 @@ public class AuthViewModel extends BaseViewModel {
     public void signUp(User user){
         composite.add(repository.signUp(user)
                 .subscribe(
-                        code -> { },
+                        code -> { _signUpCode.postValue(code); },
                         throwable ->  _error.postValue(throwable.getMessage())
                 )
         );
