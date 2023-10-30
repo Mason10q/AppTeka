@@ -31,7 +31,10 @@ public class BasketViewModel extends BaseViewModel implements DrugAmountControll
     public void getAllBasket(String email){
         repository.getAllBasket(email)
                 .subscribe(
-                        drugs -> _basketData.postValue(drugs),
+                        drugs -> {
+                            _basketData.postValue(drugs);
+                            _amountChangedData.postValue(new Object());
+                        },
                         throwable -> _error.postValue(throwable.getMessage())
                 );
     }
@@ -65,4 +68,14 @@ public class BasketViewModel extends BaseViewModel implements DrugAmountControll
                         throwable -> _error.postValue(throwable.getMessage())
                 );
     }
+
+    @SuppressLint("CheckResult")
+    public void clearBasket(String email){
+        repository.clearBasket(email)
+                .subscribe(
+                        () -> {},
+                        throwable -> _error.postValue(throwable.getMessage())
+                );
+    }
+
 }

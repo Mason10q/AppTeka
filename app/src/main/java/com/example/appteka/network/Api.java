@@ -48,5 +48,8 @@ public interface Api {
 
     @POST("/delete")
     Completable delete(@Query("drug_name") String name, @Query("email") String email);
+
+    @POST("/clearBasket")
+    Completable clearBasket(@Query("email") String email);
 }
 

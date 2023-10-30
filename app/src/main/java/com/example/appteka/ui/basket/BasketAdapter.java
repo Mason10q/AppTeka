@@ -93,6 +93,12 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
         return items.size();
     }
 
+    public void removeAllItems(){
+        int end = getItemCount();
+        items.clear();
+        notifyItemRangeRemoved(0, end);
+    }
+
     public void removeItem(Drug item){
         int pos = items.indexOf(item);
         this.items.remove(item);

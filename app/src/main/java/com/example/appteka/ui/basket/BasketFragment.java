@@ -49,12 +49,18 @@ public class BasketFragment extends Fragment {
         viewModel = new ViewModelProvider(this, factory).get(BasketViewModel.class);
         sp = requireContext().getSharedPreferences("APP_PREFS", MODE_PRIVATE);
 
+        String email = sp.getString("EMAIL", " ");
+
         prepareAdapter();
         createObservers();
 
-        viewModel.getAllBasket(sp.getString("EMAIL", " "));
+        viewModel.getAllBasket(email);
 
         binding.payBtn.setText(getResources().getString(R.string.pay, 1));
+
+        binding.payBtn.setOnClickListener((v) -> {
+            clearBasket(email);
+        });
 
         return binding.getRoot();
     }
@@ -68,8 +74,6 @@ public class BasketFragment extends Fragment {
     private void createObservers(){
         viewModel.basketData.observe(getViewLifecycleOwner(), (drugs) -> {
             adapter.refreshItems(drugs);
-            setContainerView();
-            binding.payBtn.setText(getResources().getString(R.string.price, adapter.countFullPrice()));
         });
 
         viewModel.amountChangedData.observe(getViewLifecycleOwner(), (obj) -> {
@@ -103,5 +107,11 @@ public class BasketFragment extends Fragment {
             ));
             binding.payBtn.setVisibility(View.VISIBLE);
         }
+    }
+
+    private void clearBasket(String email){
+        viewModel.clearBasket(email);
+        adapter.removeAllItems();
+        setContainerView();
     }
 }
