@@ -4,4 +4,5 @@
     <string name="price">%1$d ₽</string>
     <string name="weight">&#160;· %1$dг</string>
     <string name="age">%1$d+</string>
+    <string name="pay">Оплатить %1$d ₽</string>
 </resources>

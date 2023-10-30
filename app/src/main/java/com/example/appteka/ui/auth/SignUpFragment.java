@@ -18,9 +18,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.appteka.core.ViewModelFactory;
 import com.example.appteka.databinding.FragmentSignupBinding;
-import com.example.appteka.di.DaggerAuthComponent;
+import com.example.appteka.di.auth.DaggerAuthComponent;
 import com.example.appteka.entities.User;
-import com.example.appteka.model.AuthViewModel;
+import com.example.appteka.model.auth.AuthViewModel;
 
 import javax.inject.Inject;
 

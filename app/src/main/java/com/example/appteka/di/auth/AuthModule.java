@@ -1,10 +1,9 @@
-package com.example.appteka.di;
+package com.example.appteka.di.auth;
 
 import androidx.lifecycle.ViewModel;
 
 import com.example.appteka.core.ViewModelKey;
-import com.example.appteka.model.AuthRepository;
-import com.example.appteka.model.AuthViewModel;
+import com.example.appteka.model.auth.AuthViewModel;
 
 import dagger.Binds;
 import dagger.Module;

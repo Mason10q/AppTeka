@@ -7,10 +7,10 @@
         android:icon="@drawable/ic_pharma"/>
 
 
-<!--    <item-->
-<!--        android:id="@+id/stFragment"-->
-<!--        android:title="Об авторе"-->
-<!--        android:icon="@drawable/ic_cart"/>-->
+    <item
+        android:id="@+id/basketFragment"
+        android:title="Корзина"
+        android:icon="@drawable/ic_cart"/>
 
 
     <item

@@ -1,4 +1,4 @@
-package com.example.appteka.model;
+package com.example.appteka.model.auth;
 
 import android.annotation.SuppressLint;
 
@@ -7,8 +7,6 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.appteka.core.BaseViewModel;
 import com.example.appteka.entities.User;
-
-import java.util.HashMap;
 
 import javax.inject.Inject;
 

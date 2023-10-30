@@ -11,6 +11,7 @@ import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Query;
 
 public interface Api {
@@ -35,4 +36,17 @@ public interface Api {
 
     @POST("/addToBasket")
     Completable addToBasket(@Query("drug_name") String drugName, @Query("email") String email);
+
+    @POST("/getAllBasket")
+    Single<List<Drug>> getAllBasket(@Query("email") String email);
+
+    @PUT("/decrease")
+    Completable decrease(@Query("drug_name") String name, @Query("email") String email);
+
+    @PUT("/increase")
+    Completable increase(@Query("drug_name") String name, @Query("email") String email);
+
+    @POST("/delete")
+    Completable delete(@Query("drug_name") String name, @Query("email") String email);
 }
+

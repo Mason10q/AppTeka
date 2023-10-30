@@ -1,4 +1,4 @@
-package com.example.appteka.model;
+package com.example.appteka.model.store;
 
 import android.annotation.SuppressLint;
 

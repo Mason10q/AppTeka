@@ -1,4 +1,4 @@
-package com.example.appteka.di;
+package com.example.appteka.di.auth;
 
 import com.example.appteka.core.CoreModule;
 import com.example.appteka.network.NetworkModule;

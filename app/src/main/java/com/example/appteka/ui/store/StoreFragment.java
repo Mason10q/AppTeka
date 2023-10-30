@@ -4,7 +4,6 @@ package com.example.appteka.ui.store;
 import static android.content.Context.MODE_PRIVATE;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,17 +15,16 @@ import androidx.fragment.app.Fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.appteka.R;
 import com.example.appteka.core.AndroidModule;
 import com.example.appteka.core.EmptyListNotificator;
 import com.example.appteka.core.ViewModelFactory;
 import com.example.appteka.databinding.FragmentStoreBinding;
-import com.example.appteka.di.DaggerStoreComponent;
+import com.example.appteka.di.store.DaggerStoreComponent;
 import com.example.appteka.entities.Drug;
 import com.example.appteka.entities.User;
-import com.example.appteka.model.StoreViewModel;
+import com.example.appteka.model.store.StoreViewModel;
 
 import java.util.List;
 
@@ -88,7 +86,7 @@ public class StoreFragment extends Fragment{
             bundle.putSerializable("DRUG", item);
             bundle.putString("USER_EMAIL", user.email);
             dialog.setArguments(bundle);
-            dialog.show(getChildFragmentManager(), "COMP_DIALOG");
+            dialog.show(getChildFragmentManager(), "DRUG_DIALOG");
         };
 
         delBinder = (item) -> {
@@ -99,8 +97,8 @@ public class StoreFragment extends Fragment{
     }
 
 
-    private void setContainerView(List<Drug> comps){
-        if(comps.size() == 0){
+    private void setContainerView(List<Drug> drugs){
+        if(drugs.size() == 0){
             binding.container.removeAllViews();
             binding.container.addView(EmptyListNotificator.createEmptyListView(
                     binding.container,

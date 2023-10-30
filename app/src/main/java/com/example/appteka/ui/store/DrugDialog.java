@@ -3,9 +3,6 @@ package com.example.appteka.ui.store;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +13,7 @@ import com.example.appteka.R;
 import com.example.appteka.core.ViewModelFactory;
 import com.example.appteka.databinding.DialogDrugBinding;
 import com.example.appteka.entities.Drug;
-import com.example.appteka.model.StoreViewModel;
+import com.example.appteka.model.store.StoreViewModel;
 import com.squareup.picasso.Picasso;
 
 import javax.inject.Inject;

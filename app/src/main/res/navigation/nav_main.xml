@@ -16,5 +16,11 @@
 
     <include app:graph="@navigation/nav_info" />
 
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.appteka.ui.basket.BasketFragment"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+
 
 </navigation>

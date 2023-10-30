@@ -1,4 +1,4 @@
-package com.example.appteka.model;
+package com.example.appteka.model.store;
 
 import com.example.appteka.entities.Drug;
 import com.example.appteka.entities.User;

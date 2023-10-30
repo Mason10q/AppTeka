@@ -1,4 +1,4 @@
-package com.example.appteka.model;
+package com.example.appteka.model.auth;
 
 import com.example.appteka.entities.User;
 import com.example.appteka.network.Api;
