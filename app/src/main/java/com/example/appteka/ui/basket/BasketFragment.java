@@ -68,6 +68,8 @@ public class BasketFragment extends Fragment {
     private void createObservers(){
         viewModel.basketData.observe(getViewLifecycleOwner(), (drugs) -> {
             adapter.refreshItems(drugs);
+            setContainerView();
+            binding.payBtn.setText(getResources().getString(R.string.price, adapter.countFullPrice()));
         });
 
         viewModel.amountChangedData.observe(getViewLifecycleOwner(), (obj) -> {

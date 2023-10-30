@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.appteka.core.BaseViewModel;
+import com.example.appteka.core.SingleLiveEvent;
 import com.example.appteka.entities.Drug;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import javax.inject.Inject;
 
 public class BasketViewModel extends BaseViewModel implements DrugAmountController{
 
-    private MutableLiveData<List<Drug>> _basketData = new MutableLiveData<>();
+    private SingleLiveEvent<List<Drug>> _basketData = new SingleLiveEvent<>();
     public LiveData<List<Drug>> basketData = _basketData;
 
     private MutableLiveData<Object> _amountChangedData = new MutableLiveData<>();

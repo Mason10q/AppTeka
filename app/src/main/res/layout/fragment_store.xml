@@ -25,13 +25,5 @@
         android:visibility="invisible"
         android:src="@drawable/ic_basket"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_drug_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
-        android:layout_alignParentBottom="true"
-        android:visibility="invisible"
-        android:src="@drawable/ic_plus"/>
 
 </RelativeLayout>

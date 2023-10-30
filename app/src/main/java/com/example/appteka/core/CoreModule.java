@@ -6,10 +6,6 @@ import dagger.Module;
 
 @Module
 public interface CoreModule {
-
     @Binds
     ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);
-
-
-
 }
